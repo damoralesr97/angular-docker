@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-body">
+      <table id="dt-empleados" class="table caption-top" cellspacing="0" width="100%">
+        <caption>Lista de empleados</caption>
+        <thead class="table-dark">
+          <tr>
+            <th >Nombre</th>
+            <th >Correo</th>
+            <th >Departamento</th>
+            <th >Telefono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados | async">
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.correo}}</td>
+            <td>{{empleado.departamento}}</td>
+            <td>{{empleado.telefono}}</td>
+            
+              <td><button (click)="eliminarEmpleado(empleado.id)" class="btn btn-danger">Eliminar</button>
+                <button (click)="editarEmpleado(empleado.id)" class="btn btn-success" style="margin-left: 10px">Editar</button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

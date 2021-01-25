@@ -1,0 +1,32 @@
+<div>
+  <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <ul class="navbar-nav">
+        
+      <li class="nav-item active">
+        <a class="navbar-brand" href="/empleados">David Andres Morales Rivera</a>
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/add" routerLinkActive="active">Crear</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/empleados" routerLinkActive="active">Listar</a>
+          </li>
+
+
+    </ul>
+
+  </nav>
+  <div class="container">
+    <br>
+    <h3 style="text-align: center;">Practica Dockers</h3>
+    <hr>  
+    <div class="card">
+      <div class="card-body">
+    <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
+  </div>
